@@ -28,6 +28,7 @@ DEFAULT_SETTINGS = {
     'font-family': ','.join(DEFAULT_FONTS),
     'font-size': '80',
     'font-weight': '400',
+    'color': '#fff',
 }
 
 SVG_TEMPLATE = """
@@ -84,6 +85,7 @@ def get_svg_avatar(text, **kwargs):
     text_style = {
         'font-weight': opts.get('font-weight'),
         'font-size': opts.get('font-size') + 'px',
+        'color': opts.get('color'),
     }
 
     return SVG_TEMPLATE.format(**{
